@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b0b0d">
+<title>DARK MUSCLE DIET GENERATOR PRO</title>
+<style>
+:root{--bg:#09090b;--panel:#141417;--panel2:#1b1b20;--line:#303036;--text:#f4f4f5;--muted:#a1a1aa;--red:#e50914;--red2:#ff303a;--green:#45d483;--amber:#f5b942;--radius:16px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at top,#211014 0,#09090b 42rem);color:var(--text);font:15px/1.5 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+button,input,select,textarea{font:inherit}button{cursor:pointer}.wrap{max-width:1200px;margin:auto;padding:18px 14px 70px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0 22px}.brand{display:flex;align-items:center;gap:12px}.mark{width:44px;height:44px;display:grid;place-items:center;background:var(--red);border-radius:12px;font-weight:1000;font-style:italic;font-size:22px;box-shadow:0 0 28px #e5091430}.eyebrow{color:var(--red2);font-size:11px;font-weight:900;letter-spacing:2px}.brand h1{font-size:clamp(17px,3vw,24px);line-height:1.1;margin:3px 0}.brand p{margin:4px 0 0;color:var(--muted);font-size:12px}.pill{border:1px solid #5c2529;background:#251114;color:#ffb3b7;border-radius:999px;padding:7px 10px;font-size:11px;font-weight:800;white-space:nowrap}
+.hero{border:1px solid #3b2024;border-radius:22px;padding:23px;background:linear-gradient(120deg,#211014,#121215 65%);margin-bottom:16px}.hero h2{font-size:clamp(25px,5vw,42px);line-height:1.03;margin:0 0 10px;letter-spacing:-1.2px}.hero h2 span{color:var(--red2)}.hero p{color:#c7c7cd;margin:0;max-width:720px}.tabs{display:flex;gap:8px;overflow:auto;padding:4px 0 14px;margin-bottom:4px}.tab{white-space:nowrap;border:1px solid var(--line);background:#111114;color:var(--muted);padding:10px 14px;border-radius:12px;font-weight:800}.tab.active{background:var(--red);border-color:var(--red);color:white}.layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,.8fr);gap:16px;align-items:start}.panel{background:linear-gradient(180deg,#17171b,#111114);border:1px solid var(--line);border-radius:var(--radius);padding:18px;margin-bottom:16px;min-width:0}.panel h3{margin:0 0 4px;font-size:18px}.sub{color:var(--muted);font-size:12px;margin:0 0 16px}.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.field{min-width:0}.field.full{grid-column:1/-1}label{display:block;color:#d4d4d8;font-size:12px;font-weight:750;margin:0 0 6px}input,select,textarea{width:100%;border:1px solid #3b3b43;border-radius:10px;padding:11px 12px;background:#0b0b0e;color:var(--text);outline:none;min-width:0}input:focus,select:focus,textarea:focus{border-color:var(--red);box-shadow:0 0 0 2px #e5091420}input[type=checkbox]{width:auto;accent-color:var(--red)}.checkrow{display:flex;align-items:center;gap:8px;color:#ddd;font-size:13px;margin:8px 0}.btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}.btn{border:1px solid var(--line);border-radius:10px;padding:11px 14px;background:#242429;color:#fff;font-weight:800}.btn.primary{background:var(--red);border-color:var(--red)}.btn.ghost{background:transparent}.btn.small{font-size:12px;padding:7px 10px}.note{font-size:12px;color:var(--muted)}.warn{border:1px solid #6b4a1a;background:#211a0c;border-radius:12px;padding:12px;color:#f4d9a0;font-size:12px;margin-top:12px}.safe{border:1px solid #235b3b;background:#0e2016;border-radius:12px;padding:12px;color:#b5f3cc;font-size:12px;margin-top:12px}.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.stat{background:#0d0d10;border:1px solid var(--line);border-radius:13px;padding:13px}.stat .label{font-size:11px;color:var(--muted);font-weight:700}.stat strong{display:block;font-size:24px;letter-spacing:-.5px;margin:2px 0}.stat small{font-size:11px;color:var(--muted)}.macrobar{height:9px;border-radius:9px;background:#333;overflow:hidden;display:flex;margin:10px 0}.macrobar span:nth-child(1){background:#e50914}.macrobar span:nth-child(2){background:#ff9b36}.macrobar span:nth-child(3){background:#6b8cff}.meal{border:1px solid var(--line);background:#101014;border-radius:13px;padding:13px;margin:10px 0}.mealhead{display:flex;justify-content:space-between;gap:8px;align-items:center}.meal h4{margin:0;font-size:14px}.meal small{color:var(--muted)}.food{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;padding:9px 0;border-bottom:1px solid #29292f}.food:last-child{border:0}.food strong{font-size:13px}.food small{display:block;color:var(--muted);font-size:11px}.grams{font-variant-numeric:tabular-nums;color:#fff;font-size:12px;font-weight:800;white-space:nowrap}.tag{display:inline-block;border:1px solid #444;border-radius:999px;padding:3px 7px;color:#d4d4d8;font-size:10px;margin:3px 4px 0 0}.section-title{display:flex;align-items:center;justify-content:space-between;gap:8px}.empty{color:var(--muted);text-align:center;padding:24px 10px}.list{padding-left:18px;color:#ddd}.list li{margin:6px 0}.checklist{display:grid;gap:8px}.checkitem{display:flex;align-items:flex-start;gap:9px;padding:10px;background:#101014;border:1px solid var(--line);border-radius:10px}.checkitem label{font-size:13px;margin:0;font-weight:500}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse;font-size:12px}th,td{text-align:left;padding:9px;border-bottom:1px solid var(--line);white-space:nowrap}th{color:#bbb}td{color:#eee}.hidden{display:none!important}.footer{text-align:center;color:#777;font-size:11px;padding:16px 0}.phasecard{border:1px solid #472126;border-radius:13px;padding:13px;background:#190f11;margin-top:10px}.phasecard h4{margin:0 0 5px}.split{display:grid;grid-template-columns:1fr 1fr;gap:10px}.progress{height:6px;background:#333;border-radius:8px;overflow:hidden}.progress div{height:100%;background:var(--red);width:0}
+@media(max-width:850px){.layout{grid-template-columns:1fr}.top{align-items:flex-start}.pill{max-width:115px;white-space:normal;text-align:center}.panel{padding:15px}}
+@media(max-width:420px){.fields{grid-template-columns:1fr}.field.full{grid-column:auto}.hero{padding:18px}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stat strong{font-size:21px}}
+@media print{body{background:#fff;color:#111}.top,.hero,.tabs,.noprint,.panel:not(.printable){display:none!important}.panel.printable{display:block!important;background:#fff;color:#111;border:0}.meal{background:#fff;color:#111;border-color:#ddd;break-inside:avoid}.food small,.sub,.note{color:#444}.wrap{max-width:none;padding:0}.layout{display:block}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+ <div class="brand"><div class="mark">DM</div><div><div class="eyebrow">NUTRITION SYSTEM / PRO</div><h1>DARK MUSCLE DIET GENERATOR</h1><p>Nutrición de culturismo · menús semanales, recetas, macros y seguimiento</p></div></div>
+ <div class="pill">PREMIUM LOCAL · SIN CUOTAS NI API</div>
+</header>
+<section class="hero">
+ <div class="eyebrow">BUILD WITH INTENT</div><h2>FUEL THE <span>PHYSIQUE.</span></h2>
+ <p>Diseña semanas de alimentación con alternativas, recetas, macros por comida, lista de compra y seguimiento. Las cifras son estimaciones y requieren revisar etiquetas y tolerancias. Las estimaciones son un punto de partida, no una prescripción médica.</p>
+</section>
+<nav class="tabs noprint" id="tabs">
+ <button class="tab active" data-view="plan">PLAN DIETÉTICO</button><button class="tab" data-view="semanal">SEMANA PREMIUM</button><button class="tab" data-view="seguimiento">SEGUIMIENTO</button><button class="tab" data-view="compra">COMPRA</button><button class="tab" data-view="peak">PEAK WEEK</button><button class="tab" data-view="datos">DATOS / EXPORTAR</button>
+</nav>
+<main>
+<section id="view-plan" class="view">
+<div class="layout">
+<div>
+ <section class="panel">
+  <h3>01 / Perfil y objetivo</h3><p class="sub">Completa los datos para calcular una estimación inicial.</p>
+  <div class="fields">
+   <div class="field"><label for="age">Edad (años)</label><input id="age" type="number" min="18" max="100" value="20"></div>
+   <div class="field"><label for="sex">Fórmula metabólica</label><select id="sex"><option value="male">Hombre</option><option value="female">Mujer</option><option value="other">Otra / estimar manualmente</option></select></div>
+   <div class="field"><label for="weight">Peso actual (kg)</label><input id="weight" type="number" min="35" max="300" step=".1" value="79.8"></div>
+   <div class="field"><label for="height">Altura (cm)</label><input id="height" type="number" min="130" max="230" value="184"></div>
+   <div class="field"><label for="waist">Cintura (cm, opcional)</label><input id="waist" type="number" min="30" max="200" step=".5" placeholder="84"></div>
+   <div class="field"><label for="activity">Actividad diaria</label><select id="activity"><option value="1.2">Baja · poco movimiento</option><option value="1.375">Ligera · 1–3 días/semana</option><option value="1.55" selected>Moderada · 3–5 días/semana</option><option value="1.725">Alta · 6–7 días/semana</option><option value="1.9">Muy alta · trabajo físico + entreno</option></select></div>
+   <div class="field"><label for="goal">Fase nutricional</label><select id="goal"><option value="bulk">Volumen controlado</option><option value="cut" selected>Definición</option><option value="maintain">Mantenimiento / recomposición</option><option value="extra">Fase adicional (por definir)</option></select></div>
+   <div class="field"><label for="training">Entrenamientos de fuerza/semana</label><select id="training"><option>2</option><option>3</option><option selected>4</option><option>5</option><option>6</option></select></div>
+   <div class="field"><label for="meals">Comidas al día</label><select id="meals"><option>3</option><option>4</option><option selected>5</option><option>6</option></select></div>
+   <div class="field"><label for="pace">Ritmo objetivo</label><select id="pace"><option value="slow">Conservador</option><option value="moderate" selected>Moderado</option></select></div>
+   <div class="field"><label for="diet">Preferencia alimentaria</label><select id="diet"><option value="omnivore">Omnívora</option><option value="vegetarian">Vegetariana (con huevos/lácteos)</option><option value="pescatarian">Pescetariana</option></select></div>
+   <div class="field full"><label for="foods">Alimentos que quieres evitar o alergias (texto libre)</label><input id="foods" placeholder="Ej.: no me gusta el atún, alergia a cacahuetes"></div>
+   <div class="field"><label for="budget">Presupuesto semanal (€)</label><input id="budget" type="number" min="0" value="70"></div>
+   <div class="field"><label for="units">Pesaje de alimentos</label><select id="units"><option value="grams">Puedo pesar en gramos</option><option value="simple">Prefiero medidas caseras aproximadas</option></select></div>
+   <div class="field full"><label for="notes">Notas / horarios / preferencias</label><textarea id="notes" rows="2" placeholder="Turnos, hora de entreno, comidas que te sientan mejor…"></textarea></div>
+  </div>
+  <div class="btns"><button class="btn primary" id="generate">GENERAR PLAN PRO</button><button class="btn ghost" id="saveProfile">Guardar perfil</button></div>
+  <p class="note">No se incluyen fórmulas de pérdida extrema, ni planes para menores. Si tienes una enfermedad, medicación, antecedentes de trastorno alimentario o necesidades clínicas, consulta con un dietista-nutricionista o médico.</p>
+ </section>
+ <section class="panel printable" id="dietPanel">
+  <div class="section-title"><div><h3>02 / Tu plan diario</h3><p class="sub" id="planSubtitle">Genera un plan para ver las comidas.</p></div><button class="btn small noprint" id="printPlan">Imprimir / PDF</button></div>
+  <div id="mealsOut" class="empty">Completa el perfil y pulsa «Generar plan PRO».</div>
+ </section>
+</div>
+<div>
+ <section class="panel">
+  <h3>03 / Objetivos diarios</h3><p class="sub">Estimación revisable según la tendencia de peso y rendimiento.</p>
+  <div class="stats">
+   <div class="stat"><div class="label">CALORÍAS</div><strong id="kcal">—</strong><small>kcal / día</small></div>
+   <div class="stat"><div class="label">PROTEÍNA</div><strong id="protein">—</strong><small>gramos / día</small></div>
+   <div class="stat"><div class="label">CARBOHIDRATOS</div><strong id="carbs">—</strong><small>gramos / día</small></div>
+   <div class="stat"><div class="label">GRASAS</div><strong id="fat">—</strong><small>gramos / día</small></div>
+  </div>
+  <div class="macrobar"><span id="barP" style="width:30%"></span><span id="barC" style="width:45%"></span><span id="barF" style="width:25%"></span></div>
+  <div class="note" id="macroNote">La proteína, los hidratos y las grasas se calculan por energía total.</div>
+ </section>
+ <section class="panel">
+  <h3>04 / Control de calidad</h3><p class="sub">Comprobaciones antes de usar el plan.</p>
+  <div class="checklist" id="checks">
+   <div class="checkitem"><span>•</span><label>Genera un plan para revisar sus cantidades.</label></div>
+  </div>
+ </section>
+ <section class="panel">
+  <h3>05 / Reglas de ajuste</h3><p class="sub">Evita cambiar calorías por una sola medición.</p>
+  <ul class="list">
+   <li>Pésate en condiciones similares y usa el promedio de 7 días.</li>
+   <li>Valora la tendencia durante 2–3 semanas, junto con cintura, hambre y rendimiento.</li>
+   <li>Si el cambio es excesivo o el rendimiento cae de forma persistente, revisa el plan antes de recortar más.</li>
+   <li>Las cantidades y calorías de alimentos son estimaciones; comprueba etiquetas y peso crudo/cocido.</li>
+  </ul>
+ </section>
+ <section class="panel">
+  <h3>06 / Fase adicional</h3><p class="sub">Pendiente de definir contigo. No se asume qué significa «death face».</p>
+  <div class="phasecard"><h4>Personalizable</h4><p class="note">Cuando aclares el término, añadiremos su lógica sin inventar un protocolo extremo ni alterar las otras fases.</p></div>
+ </section>
+</div>
+</div>
+</section>
+
+<section id="view-semanal" class="view hidden">
+ <section class="panel">
+  <div class="section-title"><div><h3>SEMANA PREMIUM · 7 DÍAS</h3><p class="sub">Menú variable, recetas resumidas, macros por día y lista de compra semanal. Genera primero un plan en la pestaña Plan dietético.</p></div><button class="btn small noprint" id="printWeek">Imprimir / PDF</button></div>
+  <div class="fields">
+   <div class="field"><label for="weekVariety">Nivel de variedad</label><select id="weekVariety"><option value="high" selected>Alta · rota ingredientes y preparaciones</option><option value="medium">Media · cocina por tandas</option></select></div>
+   <div class="field"><label for="weekBudget">Prioridad de compra</label><select id="weekBudget"><option value="budget" selected>Económica</option><option value="balanced">Equilibrada</option><option value="variety">Máxima variedad</option></select></div>
+  </div>
+  <div class="btns noprint"><button class="btn primary" id="generateWeek">GENERAR / REGENERAR SEMANA</button><button class="btn" id="copyWeek">Copiar menú semanal</button><button class="btn" id="exportWeek">Exportar semana CSV</button></div>
+  <div class="safe">Los menús son propuestas orientativas, no una dieta clínica. Revisa alergias, etiquetas, conservación y cantidades crudas/cocidas. La base nutricional es aproximada y puede diferir de la marca o receta real.</div>
+  <div id="weekOut" class="empty printable">Genera tu plan diario y pulsa «Generar semana» para crear los 7 días.</div>
+ </section>
+ <section class="panel">
+  <h3>Panel de control semanal</h3><p class="sub">Comparación de las estimaciones calculadas para cada día.</p>
+  <div id="weekSummary" class="empty">Todavía no hay semana generada.</div>
+ </section>
+</section>
+
+<section id="view-seguimiento" class="view hidden">
+ <div class="layout"><div class="panel">
+  <h3>Seguimiento semanal</h3><p class="sub">Registra peso medio, cintura y rendimiento para orientar el siguiente ajuste.</p>
+  <div class="fields">
+   <div class="field"><label for="checkDate">Fecha</label><input id="checkDate" type="date"></div>
+   <div class="field"><label for="avgWeight">Peso medio 7 días (kg)</label><input id="avgWeight" type="number" min="30" max="300" step=".1"></div>
+   <div class="field"><label for="checkWaist">Cintura (cm)</label><input id="checkWaist" type="number" min="30" max="200" step=".5"></div>
+   <div class="field"><label for="adherence">Adherencia aproximada (%)</label><input id="adherence" type="number" min="0" max="100" value="85"></div>
+   <div class="field"><label for="performance">Rendimiento</label><select id="performance"><option>Mejorando</option><option selected>Estable</option><option>Descendiendo</option></select></div>
+   <div class="field"><label for="hunger">Hambre</label><select id="hunger"><option>Baja</option><option selected>Moderada</option><option>Alta</option></select></div>
+   <div class="field full"><label for="checkNotes">Observaciones</label><textarea id="checkNotes" rows="2" placeholder="Sueño, pasos, digestión, turnos…"></textarea></div>
+  </div><div class="btns"><button class="btn primary" id="addCheck">Guardar revisión</button><button class="btn" id="clearChecks">Borrar historial de revisiones</button></div>
+ </div><div class="panel"><h3>Historial</h3><div id="checkHistory" class="empty">Todavía no hay revisiones.</div><div id="trendAdvice" class="safe hidden"></div></div></div>
+</section>
+<section id="view-compra" class="view hidden">
+ <section class="panel"><div class="section-title"><div><h3>Lista de la compra</h3><p class="sub">Lista orientativa derivada del plan generado; revisa cantidades, precios y etiquetas.</p></div><button class="btn small noprint" id="copyShopping">Copiar lista</button></div><div id="shoppingOut" class="empty">Genera un plan para calcular una lista orientativa.</div></section>
+</section>
+<section id="view-peak" class="view hidden">
+ <div class="layout"><div class="panel">
+  <h3>Peak Week · enfoque prudente</h3><p class="sub">La semana previa a competir no debe convertirse en una manipulación improvisada de líquidos o electrolitos.</p>
+  <div class="safe">Mantén una hidratación normal y consistente, no elimines la sal ni fuerces cargas de agua. No se generan protocolos de deshidratación, diuréticos, laxantes ni cambios extremos de sodio o potasio. La apariencia final es individual y no se puede garantizar.</div>
+  <div class="fields" style="margin-top:14px">
+   <div class="field"><label for="peakDate">Fecha de competición</label><input type="date" id="peakDate"></div>
+   <div class="field"><label for="peakExperience">Experiencia</label><select id="peakExperience"><option>Primera competición</option><option>Ya he competido</option></select></div>
+   <div class="field full"><label for="peakTolerance">Digestibilidad conocida / alimentos seguros</label><textarea id="peakTolerance" rows="2" placeholder="Alimentos que toleras bien, intolerancias, fibra que sueles tomar…"></textarea></div>
+  </div><div class="btns"><button class="btn primary" id="makePeak">Crear checklist prudente</button></div>
+  <div id="peakOut" class="empty">Añade la fecha para crear una lista de preparación general.</div>
+ </div><div class="panel"><h3>Principios de seguridad</h3><ul class="list"><li>No experimentes con alimentos o suplementos nuevos durante la semana de competición.</li><li>No hagas cambios drásticos en agua, sal, potasio ni fibra sin supervisión profesional.</li><li>Evita diuréticos, laxantes y estrategias de sudoración forzada.</li><li>Si aparecen mareos, confusión, palpitaciones, debilidad intensa o desmayo, busca atención médica.</li><li>Para una preparación competitiva, trabaja con un dietista-nutricionista deportivo con experiencia.</li></ul></div></div>
+</section>
+<section id="view-datos" class="view hidden">
+ <div class="layout"><div class="panel"><h3>Exportar / importar</h3><p class="sub">Guarda una copia de tu configuración y seguimiento. Los datos se almacenan localmente en este navegador.</p>
+ <div class="btns"><button class="btn primary" id="exportJSON">Exportar copia JSON</button><button class="btn" id="exportCSV">Exportar seguimiento CSV</button><button class="btn" id="exportDietCSV">Exportar plan CSV</button></div>
+ <div class="field" style="margin-top:14px"><label for="importFile">Importar copia JSON</label><input id="importFile" type="file" accept=".json,application/json"></div><div class="btns"><button class="btn" id="clearAll">Borrar todos los datos locales</button></div>
+ <div class="warn">Exporta una copia antes de borrar datos. Importar sustituirá los datos locales de esta aplicación.</div></div>
+ <div class="panel"><h3>Estado local</h3><div id="dataStatus" class="note"></div><p class="note">Esta aplicación no envía tus datos a un servidor. No uses datos identificativos en las notas.</p></div></div>
+</section>
+</main>
+<div class="footer">DARK MUSCLE DIET GENERATOR PRO · Herramienta de planificación, no diagnóstico ni tratamiento médico.</div>
+</div>
+<script>
+(function(){
+"use strict";
+const $=id=>document.getElementById(id);
+const STORE="dmDietGenPro.v1";
+const defaultState={profile:null,plan:null,checks:[],shopping:[],peak:null};
+let state=loadState();
+const foodDB=[
+{name:"Avena",group:"carb",k:3.89,p:.169,c:.663,f:.069,veg:true,fish:false},
+{name:"Arroz (peso en seco)",group:"carb",k:3.65,p:.071,c:.80,f:.007,veg:true,fish:false},
+{name:"Patata (peso en crudo)",group:"carb",k:.77,p:.020,c:.17,f:.001,veg:true,fish:false},
+{name:"Pan integral",group:"carb",k:2.47,p:.13,c:.41,f:.042,veg:true,fish:false},
+{name:"Plátano",group:"carb",k:.89,p:.011,c:.228,f:.003,veg:true,fish:false},
+{name:"Pasta (peso en seco)",group:"carb",k:3.71,p:.13,c:.75,f:.015,veg:true,fish:false},
+{name:"Pechuga de pollo (cruda)",group:"protein",k:1.20,p:.225,c:0,f:.026,veg:false,fish:false},
+{name:"Pavo (crudo)",group:"protein",k:1.14,p:.24,c:0,f:.015,veg:false,fish:false},
+{name:"Atún al natural (escurrido)",group:"protein",k:1.16,p:.26,c:0,f:.01,veg:false,fish:true},
+{name:"Salmón (crudo)",group:"protein",k:2.08,p:.20,c:0,f:.13,veg:false,fish:true},
+{name:"Huevos enteros",group:"protein",k:1.43,p:.126,c:.007,f:.095,veg:true,fish:false},
+{name:"Yogur skyr natural",group:"protein",k:.63,p:.11,c:.04,f:.002,veg:true,fish:false},
+{name:"Tofu firme",group:"protein",k:1.44,p:.17,c:.03,f:.09,veg:true,fish:false},
+{name:"Lentejas cocidas",group:"protein",k:1.16,p:.09,c:.20,f:.004,veg:true,fish:false},
+{name:"Aceite de oliva",group:"fat",k:8.84,p:0,c:0,f:1,veg:true,fish:false},
+{name:"Almendras",group:"fat",k:5.79,p:.21,c:.216,f:.50,veg:true,fish:false},
+{name:"Aguacate",group:"fat",k:1.60,p:.02,c:.085,f:.147,veg:true,fish:false},
+{name:"Verduras variadas",group:"veg",k:.35,p:.02,c:.07,f:.003,veg:true,fish:false},
+{name:"Frutos rojos",group:"fruit",k:.50,p:.01,c:.12,f:.003,veg:true,fish:false},
+{name:"Manzana",group:"fruit",k:.52,p:.003,c:.14,f:.002,veg:true,fish:false},
+{name:"Naranja",group:"fruit",k:.47,p:.009,c:.12,f:.001,veg:true,fish:false},
+{name:"Queso fresco batido 0%",group:"protein",k:.46,p:.08,c:.04,f:.002,veg:true,fish:false},
+{name:"Requesón",group:"protein",k:.98,p:.11,c:.03,f:.045,veg:true,fish:false},
+{name:"Garbanzos cocidos",group:"protein",k:1.64,p:.089,c:.27,f:.026,veg:true,fish:false},
+{name:"Alubias cocidas",group:"protein",k:1.27,p:.085,c:.22,f:.005,veg:true,fish:false},
+{name:"Merluza (cruda)",group:"protein",k:.86,p:.18,c:0,f:.012,veg:false,fish:true},
+{name:"Gambas (crudas)",group:"protein",k:.99,p:.24,c:0,f:.003,veg:false,fish:true},
+{name:"Ternera magra (cruda)",group:"protein",k:1.70,p:.21,c:0,f:.09,veg:false,fish:false},
+{name:"Lomo de cerdo magro (crudo)",group:"protein",k:1.43,p:.21,c:0,f:.055,veg:false,fish:false},
+{name:"Leche semidesnatada",group:"protein",k:.47,p:.034,c:.047,f:.016,veg:true,fish:false},
+{name:"Tortitas de maíz",group:"carb",k:3.87,p:.08,c:.81,f:.03,veg:true,fish:false},
+{name:"Cuscús (peso en seco)",group:"carb",k:3.76,p:.127,c:.773,f:.006,veg:true,fish:false},
+{name:"Quinoa (peso en seco)",group:"carb",k:3.68,p:.141,c:.64,f:.061,veg:true,fish:false},
+{name:"Boniato (crudo)",group:"carb",k:.86,p:.016,c:.20,f:.001,veg:true,fish:false},
+{name:"Tortilla de trigo",group:"carb",k:3.10,p:.085,c:.52,f:.08,veg:true,fish:false},
+{name:"Crema de cacahuete",group:"fat",k:5.88,p:.25,c:.20,f:.50,veg:true,fish:false},
+{name:"Nueces",group:"fat",k:6.54,p:.152,c:.137,f:.652,veg:true,fish:false},
+{name:"Semillas de chía",group:"fat",k:4.86,p:.17,c:.42,f:.31,veg:true,fish:false},
+{name:"Tomate",group:"veg",k:.18,p:.009,c:.039,f:.002,veg:true,fish:false},
+{name:"Espinacas",group:"veg",k:.23,p:.029,c:.036,f:.004,veg:true,fish:false},
+{name:"Calabacín",group:"veg",k:.17,p:.012,c:.031,f:.003,veg:true,fish:false},
+{name:"Brócoli",group:"veg",k:.34,p:.028,c:.07,f:.004,veg:true,fish:false},
+{name:"Champiñones",group:"veg",k:.22,p:.031,c:.033,f:.003,veg:true,fish:false},
+{name:"Pimiento",group:"veg",k:.31,p:.01,c:.06,f:.003,veg:true,fish:false}
+];
+function loadState(){try{const x=JSON.parse(localStorage.getItem(STORE)||"null");return x&&typeof x==="object"?Object.assign({},defaultState,x):JSON.parse(JSON.stringify(defaultState))}catch(e){return Object.assign({},defaultState)}}
+function persist(){try{localStorage.setItem(STORE,JSON.stringify(state));$("dataStatus").textContent=`Perfil: ${state.profile?"guardado":"sin guardar"} · Plan: ${state.plan?"generado":"sin generar"} · Revisiones: ${state.checks.length}`;}catch(e){alert("No se pudieron guardar los datos en este navegador. Exporta una copia JSON.");}}
+function num(id,def=0){const v=Number($(id).value);return Number.isFinite(v)?v:def}
+function profileFromForm(){return {age:num("age"),sex:$("sex").value,weight:num("weight"),height:num("height"),waist:num("waist"),activity:num("activity",1.55),goal:$("goal").value,training:num("training",4),meals:num("meals",5),pace:$("pace").value,diet:$("diet").value,foods:$("foods").value,budget:num("budget",70),units:$("units").value,notes:$("notes").value};}
+function validProfile(p){if(p.age<18||p.age>100)return"Esta herramienta está configurada para adultos de 18 años o más.";if(p.weight<35||p.weight>300)return"Revisa el peso: debe estar entre 35 y 300 kg.";if(p.height<130||p.height>230)return"Revisa la altura: debe estar entre 130 y 230 cm.";if(p.meals<3||p.meals>6)return"Selecciona entre 3 y 6 comidas.";return""}
+function estimate(p){const bmr=10*p.weight+6.25*p.height-5*p.age+(p.sex==="male"?5:p.sex==="female"?-161:0);const tdee=bmr*p.activity;let kcal=tdee;if(p.goal==="bulk")kcal=tdee*(p.pace==="slow"?1.05:1.08);if(p.goal==="cut")kcal=tdee*(p.pace==="slow"?.90:.85);if(p.goal==="maintain"||p.goal==="extra")kcal=tdee;
+kcal=Math.round(kcal/25)*25;const protein=Math.round(p.weight*(p.goal==="bulk"?1.8:2.0));const fat=Math.round(p.weight*(p.goal==="cut"?0.8:0.9));const carbs=Math.max(0,Math.round((kcal-protein*4-fat*9)/4));return{bmr:Math.round(bmr),tdee:Math.round(tdee),kcal,protein,fat,carbs,goal:p.goal};}
+function allowedFood(f,p){if(p.diet==="vegetarian"&&!f.veg)return false;if(p.diet==="pescatarian"&&!f.veg&&!f.fish)return false;const avoid=(p.foods||"").toLowerCase();return !avoid.split(/[,;]+/).map(x=>x.trim()).filter(Boolean).some(x=>x.length>2&&f.name.toLowerCase().includes(x))}
+function pick(group,p,exclude=[]){let arr=foodDB.filter(f=>f.group===group&&allowedFood(f,p)&&!exclude.includes(f.name));if(!arr.length)arr=foodDB.filter(f=>f.group===group&&allowedFood(f,p));return arr[0]||foodDB.find(f=>f.group===group)||foodDB[0]}
+function amountFor(f,targetKcal){return Math.max(0,Math.round(targetKcal/(f.k*10))*10)}
+function calcFood(f,g){const factor=g/100;return{k:f.k*100*factor,p:f.p*100*factor,c:f.c*100*factor,fat:f.f*100*factor}}
+function foodRow(f,g){const m=calcFood(f,g);return{food:f.name,grams:g,kcal:Math.round(m.k),p:+m.p.toFixed(1),c:+m.c.toFixed(1),fat:+m.fat.toFixed(1)}}
+function generatePlan(p,m){
+ const n=p.meals, meals=[], names=["Desayuno","Media mañana","Comida","Merienda","Cena","Comida 6"];
+ const carbFoods=foodDB.filter(f=>f.group==="carb"&&allowedFood(f,p));
+ const proteinFoods=foodDB.filter(f=>f.group==="protein"&&allowedFood(f,p));
+ const fatFoods=foodDB.filter(f=>f.group==="fat"&&allowedFood(f,p));
+ const veg=pick("veg",p), fruit=pick("fruit",p);
+ // Pick varied, compatible foods from the allowed database.
+ const chosen=[pick("carb",p),pick("protein",p),pick("fat",p),veg,fruit];
+ const vars=chosen.map(f=>({food:f,grams:100}));
+ const targets={k:m.kcal,p:m.protein,c:m.carbs,fat:m.fat};
+ // Coordinate descent: fit actual food macros to the target; weights remain in 5 g increments.
+ function totals(){return vars.reduce((a,v)=>{const x=calcFood(v.food,v.grams);a.k+=x.k;a.p+=x.p;a.c+=x.c;a.fat+=x.fat;return a},{k:0,p:0,c:0,fat:0})}
+ const weights={k:1/(m.kcal*m.kcal),p:2/(m.protein*m.protein),c:1.5/(Math.max(1,m.carbs)**2),fat:1/(m.fat*m.fat)};
+ function loss(t){return (t.k-targets.k)**2*weights.k+(t.p-targets.p)**2*weights.p+(t.c-targets.c)**2*weights.c+(t.fat-targets.fat)**2*weights.fat}
+ // Use several coordinate passes; food kcal values and macro-derived calories may differ slightly.
+ for(let pass=0;pass<14;pass++){for(const v of vars){let best=v.grams,bestLoss=loss(totals());for(let g=0;g<=1800;g+=5){v.grams=g;const l=loss(totals());if(l<bestLoss){bestLoss=l;best=g}}v.grams=best}}
+ // Distribute daily ingredient totals across meals, with a protein-containing item in every meal.
+ const daily=vars.map(v=>foodRow(v.food,v.grams)).filter(x=>x.grams>0);
+ for(let i=0;i<n;i++){const share=1/n;const items=[];for(const item of daily){const grams=Math.round(item.grams/n/5)*5;if(grams>0){const f=foodDB.find(x=>x.name===item.food);items.push(foodRow(f,grams))}}
+  if(i===0){const extra=foodRow(fruit,0);void extra}
+  meals.push({name:names[i]||`Comida ${i+1}`,items,share:Math.round(share*100)});
+ }
+ const all=meals.flatMap(x=>x.items);
+ return {meals,all,actual:all.reduce((a,x)=>({k:a.k+x.kcal,p:a.p+x.p,c:a.c+x.c,fat:a.fat+x.fat}),{k:0,p:0,c:0,fat:0}),targets};
+}
+
+const recipeNames = [
+ ["Bol de skyr con avena y fruta","Mezcla el skyr con avena y fruta troceada; añade canela si te gusta."],
+ ["Tostadas con huevos y tomate","Tuesta el pan, cocina los huevos y acompaña con tomate."],
+ ["Porridge de avena y leche","Cuece la avena con leche; sirve con fruta por encima."],
+ ["Wrap de pollo y verduras","Cocina el pollo, saltea las verduras y monta el wrap."],
+ ["Arroz salteado con pavo","Cuece el arroz; saltea el pavo y las verduras y mezcla."],
+ ["Pasta con atún y tomate","Cuece la pasta y mezcla con atún escurrido y tomate."],
+ ["Patata asada con merluza","Hornea la patata y cocina la merluza a la plancha."],
+ ["Bowl de quinoa con tofu","Cuece la quinoa y dora el tofu; combina con verduras."],
+ ["Lentejas templadas con huevo","Mezcla las lentejas cocidas con huevo cocido y verduras."],
+ ["Salmón con boniato y brócoli","Hornea el boniato, cocina el salmón y acompaña con brócoli."],
+ ["Ternera con cuscús y verduras","Hidrata el cuscús y saltea la ternera con verduras."],
+ ["Yogur con fruta y frutos secos","Combina el lácteo, fruta y frutos secos en un bol."],
+ ["Tortilla con patata y espinacas","Cocina las patatas y cuaja con huevo y espinacas."],
+ ["Garbanzos salteados con verduras","Saltea los garbanzos con verduras y especias suaves."]
+];
+function weeklyCandidates(p,day,mealIndex,variety){
+ const names=["Desayuno","Media mañana","Comida","Merienda","Cena","Comida 6"];
+ const carb=foodDB.filter(f=>f.group==="carb"&&allowedFood(f,p));
+ const prot=foodDB.filter(f=>f.group==="protein"&&allowedFood(f,p));
+ const fats=foodDB.filter(f=>f.group==="fat"&&allowedFood(f,p));
+ const veg=foodDB.filter(f=>f.group==="veg"&&allowedFood(f,p));
+ const fruit=foodDB.filter(f=>f.group==="fruit"&&allowedFood(f,p));
+ const pickRot=(arr,offset)=>arr.length?arr[(day*(variety==="high"?3:1)+mealIndex+offset)%arr.length]:null;
+ let c=pickRot(carb,0), pr=pickRot(prot,2), v=pickRot(veg,1), fr=pickRot(fruit,3), fa=pickRot(fats,4);
+ // Meal-aware pairings add variety without pretending every combination is a named recipe.
+ if(mealIndex===0||mealIndex===3){pr=prot.find(f=>/skyr|queso fresco|requesón|huevos|leche|tofu/i.test(f.name))||pr;c=carb.find(f=>/avena|pan integral|tortitas|plátano/i.test(f.name))||c;}
+ if(mealIndex===2||mealIndex===4){pr=prot.find(f=>/pollo|pavo|atún|salmón|merluza|ternera|cerdo|tofu|lentejas|garbanzos|alubias|gambas/i.test(f.name))||pr;c=carb.find(f=>/arroz|patata|pasta|cuscús|quinoa|boniato/i.test(f.name))||c;}
+ return [c,pr,fa,v,fr].filter(Boolean);
+}
+function createWeek(profile,macros,basePlan){
+ const days=["Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"];
+ const variety=$("weekVariety")?.value||"high";
+ const mode=$("weekBudget")?.value||"budget";
+ const week=[];
+ for(let d=0;d<7;d++){
+  const meals=[], dayItems=[];
+  for(let mi=0;mi<profile.meals;mi++){
+   const chosen=weeklyCandidates(profile,d,mi,variety);
+   // Portion each meal from the daily target. The same food may recur, but rotations vary the week.
+   const share=1/profile.meals;
+   const target={k:macros.kcal*share,p:macros.protein*share,c:macros.carbs*share,fat:macros.fat*share};
+   const vars=chosen.map(f=>({food:f,grams:0}));
+   // Start with energy split across carbohydrate/protein/fat sources; optimize small 5 g steps.
+   vars.forEach(v=>{v.grams=v.food.group==="veg"?100:v.food.group==="fruit"?100:50});
+   const totals=()=>vars.reduce((a,v)=>{const x=calcFood(v.food,v.grams);a.k+=x.k;a.p+=x.p;a.c+=x.c;a.fat+=x.fat;return a},{k:0,p:0,c:0,fat:0});
+   const weights={k:1/(Math.max(1,target.k)**2),p:1.8/(Math.max(1,target.p)**2),c:1.2/(Math.max(1,target.c)**2),fat:1/(Math.max(1,target.fat)**2)};
+   const loss=t=>((t.k-target.k)**2*weights.k)+((t.p-target.p)**2*weights.p)+((t.c-target.c)**2*weights.c)+((t.fat-target.fat)**2*weights.fat);
+   for(let pass=0;pass<4;pass++) for(const v of vars){
+    let best=v.grams,bestL=loss(totals());
+    for(let g=0;g<=650;g+=10){v.grams=g;const l=loss(totals());if(l<bestL){bestL=l;best=g;}}
+    v.grams=best;
+   }
+   const items=vars.filter(v=>v.grams>=10).map(v=>foodRow(v.food,v.grams));
+   // Recipe titles are selected by meal type; instructions are intentionally simple.
+   const recipe=recipeNames[(d*2+mi*3)%recipeNames.length];
+   meals.push({name:["Desayuno","Media mañana","Comida","Merienda","Cena","Recena"][mi]||`Comida ${mi+1}`,items,recipe:recipe[0],instructions:recipe[1]});
+   dayItems.push(...items);
+  }
+  const totals=dayItems.reduce((a,x)=>({k:a.k+x.kcal,p:a.p+x.p,c:a.c+x.c,fat:a.fat+x.fat}),{k:0,p:0,c:0,fat:0});
+  week.push({day:days[d],meals,totals});
+ }
+ return week;
+}
+function renderWeek(week){
+ const out=$("weekOut");out.className="";out.innerHTML="";
+ week.forEach((day,di)=>{
+  const card=document.createElement("section");card.className="meal";
+  const t=day.totals;
+  card.innerHTML=`<div class="mealhead"><h4>${day.day}</h4><small>${Math.round(t.k)} kcal · P ${Math.round(t.p)} g · HC ${Math.round(t.c)} g · G ${Math.round(t.fat)} g</small></div>`;
+  day.meals.forEach((meal,mi)=>{
+   const block=document.createElement("div");block.className="meal";
+   block.innerHTML=`<div class="mealhead"><h4>${mi+1}. ${esc(meal.name)} · ${esc(meal.recipe)}</h4><small>${Math.round(meal.items.reduce((s,x)=>s+x.kcal,0))} kcal</small></div><p class="note">${esc(meal.instructions)}</p>`;
+   meal.items.forEach(x=>{const row=document.createElement("div");row.className="food";row.innerHTML=`<div><strong>${esc(x.food)}</strong><small>${x.kcal} kcal · P ${x.p} g · HC ${x.c} g · G ${x.fat} g</small></div><div class="grams">${x.grams} g</div>`;block.append(row)});
+   card.append(block);
+  });
+  out.append(card);
+ });
+ const sum=$("weekSummary");
+ const avg=week.reduce((a,d)=>({k:a.k+d.totals.k,p:a.p+d.totals.p,c:a.c+d.totals.c,fat:a.fat+d.totals.fat}),{k:0,p:0,c:0,fat:0});
+ sum.className="tablewrap";sum.innerHTML=`<table><thead><tr><th>Día</th><th>kcal</th><th>Proteína</th><th>HC</th><th>Grasas</th><th>vs objetivo kcal</th></tr></thead><tbody>${week.map(d=>`<tr><td>${d.day}</td><td>${Math.round(d.totals.k)}</td><td>${Math.round(d.totals.p)} g</td><td>${Math.round(d.totals.c)} g</td><td>${Math.round(d.totals.fat)} g</td><td>${Math.round(d.totals.k-(state.plan?.macros?.kcal||0))}</td></tr>`).join("")}</tbody></table><p class="note">Promedio diario: ${Math.round(avg.k/7)} kcal · P ${Math.round(avg.p/7)} g · HC ${Math.round(avg.c/7)} g · G ${Math.round(avg.fat/7)} g. Compara con tu objetivo y revisa los días con diferencias grandes antes de usar el menú.</p>`;
+ state.week=week;persist();
+}
+function weekText(week){return week.map(d=>`${d.day} — ${Math.round(d.totals.k)} kcal | P ${Math.round(d.totals.p)} g | HC ${Math.round(d.totals.c)} g | G ${Math.round(d.totals.fat)} g\n`+d.meals.map(m=>`${m.name}: ${m.recipe}\n${m.items.map(x=>`  • ${x.food}: ${x.grams} g (${x.kcal} kcal; P ${x.p}; HC ${x.c}; G ${x.fat})`).join("\n")}\nPreparación: ${m.instructions}`).join("\n")).join("\n\n")}
+
+function renderPlan(p,m,plan){const actual=plan.actual||plan.all.reduce((a,x)=>({k:a.k+x.kcal,p:a.p+x.p,c:a.c+x.c,fat:a.fat+x.fat}),{k:0,p:0,c:0,fat:0});$("kcal").textContent=Math.round(actual.k).toLocaleString("es-ES");$("protein").textContent=Math.round(actual.p);$("carbs").textContent=Math.round(actual.c);$("fat").textContent=Math.round(actual.fat);const total=actual.p*4+actual.c*4+actual.fat*9;$("barP").style.width=(actual.p*4/Math.max(1,total)*100)+"%";$("barC").style.width=(actual.c*4/Math.max(1,total)*100)+"%";$("barF").style.width=(actual.fat*9/Math.max(1,total)*100)+"%";$("macroNote").textContent=`Objetivo estimado: ${m.kcal} kcal · ${m.protein} g proteína · ${m.carbs} g HC · ${m.fat} g grasa. Mantenimiento estimado: ${m.tdee} kcal. Las cifras superiores suman los alimentos generados.`;$("planSubtitle").textContent=`${goalName(p.goal)} · ${p.meals} comidas · ${m.kcal} kcal estimadas`;const out=$("mealsOut");out.innerHTML="";plan.meals.forEach((meal,i)=>{const box=document.createElement("div");box.className="meal";const h=document.createElement("div");h.className="mealhead";h.innerHTML=`<h4>${i+1}. ${esc(meal.name)}</h4><small>aprox. ${meal.share}% de la energía</small>`;box.append(h);meal.items.forEach(item=>{const row=document.createElement("div");row.className="food";row.innerHTML=`<div><strong>${esc(item.food)}</strong><small>${item.kcal} kcal · P ${item.p} g · HC ${item.c} g · G ${item.fat} g</small></div><div class="grams">${item.grams} g</div>`;box.append(row)});out.append(box)});const totalFood=plan.all.reduce((a,x)=>a+x.kcal,0);const issues=[];const dif=Math.abs(totalFood-m.kcal)/Math.max(1,m.kcal);if(dif>.10)issues.push(`La suma de los alimentos (${Math.round(totalFood)} kcal) difiere más del 10% del objetivo (${m.kcal} kcal). Ajusta cantidades antes de seguir el plan.`);if(p.goal==="extra")issues.push("La fase adicional está en modo mantenimiento provisional hasta que definas su significado.");issues.push("Los macros mostrados arriba son la suma estimada de los alimentos incluidos; compara también con los objetivos escritos bajo las tarjetas.");issues.push("Confirma si arroz, pasta y carnes se pesan en seco/crudo; la cocción cambia el peso.");$("checks").innerHTML=issues.map(x=>`<div class="checkitem"><span>⚠</span><label>${esc(x)}</label></div>`).join("");state.plan={profile:p,macros:m,mealPlan:plan,createdAt:new Date().toISOString()};state.shopping=aggregateShopping(plan);renderShopping();persist();}
+function goalName(g){return({bulk:"Volumen controlado",cut:"Definición",maintain:"Mantenimiento / recomposición",extra:"Fase adicional (provisional)"})[g]||g}
+function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function aggregateShopping(plan){const map={};plan.all.forEach(x=>map[x.food]=(map[x.food]||0)+x.grams);return Object.entries(map).map(([food,grams])=>({food,grams:Math.round(grams/10)*10}));}
+function renderShopping(){const el=$("shoppingOut");if(state.week&&state.week.length===7){const map={};state.week.forEach(d=>d.meals.forEach(m=>m.items.forEach(x=>map[x.food]=(map[x.food]||0)+x.grams)));const weeklyItems=Object.entries(map).map(([food,grams])=>({food,grams:Math.round(grams/10)*10}));el.className="";el.innerHTML=`<p class="note">Cantidades aproximadas para 7 días, sumadas desde el menú semanal.</p><div class="checklist">${weeklyItems.map(x=>`<div class="checkitem"><input type="checkbox" aria-label="Marcar ${esc(x.food)}"><label>${esc(x.food)} — ${x.grams} g/semana</label></div>`).join("")}</div>`;return}if(!state.shopping.length){el.className="empty";el.textContent="Genera un plan para calcular una lista orientativa.";return}el.className="";el.innerHTML=`<p class="note">Cantidades para un día. Multiplica por los días que quieras preparar y ajusta al envase.</p><div class="checklist">${state.shopping.map(x=>`<div class="checkitem"><input type="checkbox" aria-label="Marcar ${esc(x.food)}"><label>${esc(x.food)} — ${x.grams} g/día</label></div>`).join("")}</div>`}
+function renderChecks(){const el=$("checkHistory");if(!state.checks.length){el.className="empty";el.textContent="Todavía no hay revisiones.";return}el.className="tablewrap";el.innerHTML=`<table><thead><tr><th>Fecha</th><th>Peso medio</th><th>Cintura</th><th>Adherencia</th><th>Rendimiento</th></tr></thead><tbody>${state.checks.slice().reverse().map(c=>`<tr><td>${esc(c.date)}</td><td>${c.weight} kg</td><td>${c.waist||"—"}</td><td>${c.adherence}%</td><td>${esc(c.performance)}</td></tr>`).join("")}</tbody></table>`;if(state.checks.length>=2){const a=state.checks[state.checks.length-2],b=state.checks[state.checks.length-1],d=+(b.weight-a.weight).toFixed(2);$("trendAdvice").classList.remove("hidden");$("trendAdvice").textContent=`Cambio entre las dos últimas revisiones: ${d>0?"+":""}${d} kg. Es una comparación simple, no una tendencia estadística. Valora al menos 2–3 semanas antes de cambiar el plan.`}}
+function download(name,content,type){const blob=new Blob([content],{type});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+function csv(rows){return rows.map(row=>row.map(v=>`"${String(v??"").replace(/"/g,'""')}"`).join(";")).join("\r\n")}
+function populate(p){if(!p)return;Object.entries(p).forEach(([k,v])=>{const map={age:"age",sex:"sex",weight:"weight",height:"height",waist:"waist",activity:"activity",goal:"goal",training:"training",meals:"meals",pace:"pace",diet:"diet",foods:"foods",budget:"budget",units:"units",notes:"notes"};const el=$(map[k]);if(el&&v!==undefined)el.value=v})}
+document.querySelectorAll(".tab").forEach(btn=>btn.addEventListener("click",()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("active",x===btn));document.querySelectorAll(".view").forEach(x=>x.classList.toggle("hidden",x.id!=="view-"+btn.dataset.view));if(btn.dataset.view==="seguimiento")renderChecks();if(btn.dataset.view==="compra")renderShopping();if(btn.dataset.view==="datos")persist()}));
+
+$("generateWeek").addEventListener("click",()=>{if(!state.plan){alert("Genera primero el plan diario en la pestaña Plan dietético.");return}const w=createWeek(state.plan.profile,state.plan.macros,state.plan.mealPlan);renderWeek(w)});
+$("printWeek").addEventListener("click",()=>window.print());
+$("copyWeek").addEventListener("click",async()=>{if(!state.week){alert("Genera primero la semana.");return}const t=weekText(state.week);try{await navigator.clipboard.writeText(t);alert("Menú semanal copiado.")}catch(e){prompt("Copia el menú semanal:",t)}});
+$("exportWeek").addEventListener("click",()=>{if(!state.week){alert("Genera primero la semana.");return}download("dark-muscle-menu-semanal.csv",csv([["dia","comida","receta","preparacion","alimento","gramos","kcal","proteina_g","hidratos_g","grasas_g"],...state.week.flatMap(d=>d.meals.flatMap(m=>m.items.map(x=>[d.day,m.name,m.recipe,m.instructions,x.food,x.grams,x.kcal,x.p,x.c,x.fat])))]),"text/csv;charset=utf-8")});
+
+$("generate").addEventListener("click",()=>{const p=profileFromForm(),err=validProfile(p);if(err){alert(err);return}const m=estimate(p),plan=generatePlan(p,m);state.profile=p;renderPlan(p,m,plan)});
+$("saveProfile").addEventListener("click",()=>{const p=profileFromForm(),err=validProfile(p);if(err){alert(err);return}state.profile=p;persist();alert("Perfil guardado en este navegador.")});
+$("printPlan").addEventListener("click",()=>window.print());
+$("addCheck").addEventListener("click",()=>{const date=$("checkDate").value||new Date().toISOString().slice(0,10),weight=num("avgWeight"),waist=num("checkWaist"),adherence=num("adherence",85);if(weight<30||weight>300){alert("Introduce un peso medio válido.");return}if(adherence<0||adherence>100){alert("La adherencia debe estar entre 0 y 100%.");return}state.checks.push({date,weight,waist,adherence,performance:$("performance").value,hunger:$("hunger").value,notes:$("checkNotes").value});state.checks.sort((a,b)=>a.date.localeCompare(b.date));persist();renderChecks();alert("Revisión guardada.")});
+$("clearChecks").addEventListener("click",()=>{if(confirm("¿Borrar todas las revisiones? Esta acción no se puede deshacer.")){state.checks=[];persist();renderChecks()}});
+$("copyShopping").addEventListener("click",async()=>{const t=state.shopping.map(x=>`${x.food}: ${x.grams} g/día`).join("\n");if(!t){alert("Genera primero un plan.");return}try{await navigator.clipboard.writeText(t);alert("Lista copiada.")}catch(e){prompt("Copia la lista:",t)}});
+$("makePeak").addEventListener("click",()=>{const date=$("peakDate").value;if(!date){alert("Selecciona la fecha de competición.");return}const tolerance=$("peakTolerance").value.trim();const tasks=["Mantener hidratación habitual y constante; no restringir líquidos.","Mantener sal/sodio habitual; no hacer cargas ni cortes extremos.","Usar alimentos ya conocidos y bien tolerados; no experimentar.","Evitar diuréticos, laxantes, sudoración forzada y suplementos nuevos.","Mantener comidas regulares y acordar cambios con un profesional deportivo.","Preparar transporte, horarios, comida de respaldo y material de competición."];state.peak={date,experience:$("peakExperience").value,tolerance,tasks};$("peakOut").className="";$("peakOut").innerHTML=`<p><strong>Competición:</strong> ${esc(date)} · ${esc(state.peak.experience)}</p><div class="checklist">${tasks.map(t=>`<div class="checkitem"><input type="checkbox"><label>${esc(t)}</label></div>`).join("")}</div>${tolerance?`<p class="note">Alimentos y tolerancia anotados: ${esc(tolerance)}</p>`:""}`;persist()});
+$("exportJSON").addEventListener("click",()=>download("dark-muscle-diet-backup.json",JSON.stringify(state,null,2),"application/json"));
+$("exportCSV").addEventListener("click",()=>download("dark-muscle-seguimiento.csv",csv([["fecha","peso_medio_kg","cintura_cm","adherencia_pct","rendimiento","hambre","notas"],...state.checks.map(c=>[c.date,c.weight,c.waist,c.adherence,c.performance,c.hunger,c.notes])]),"text/csv;charset=utf-8"));
+$("exportDietCSV").addEventListener("click",()=>{if(!state.plan){alert("Genera primero un plan.");return}download("dark-muscle-plan.csv",csv([["comida","alimento","gramos","kcal","proteina_g","hidratos_g","grasas_g"],...state.plan.mealPlan.meals.flatMap(m=>m.items.map(i=>[m.name,i.food,i.grams,i.kcal,i.p,i.c,i.fat]))]),"text/csv;charset=utf-8")});
+$("importFile").addEventListener("change",async e=>{const f=e.target.files&&e.target.files[0];if(!f)return;try{const x=JSON.parse(await f.text());if(!x||typeof x!=="object"||!Array.isArray(x.checks)||!Array.isArray(x.shopping))throw new Error("Formato incorrecto");if(!confirm("La importación sustituirá los datos locales de esta aplicación. ¿Continuar?"))return;state=Object.assign({},defaultState,x);populate(state.profile);if(state.plan)renderPlan(state.plan.profile,state.plan.macros,state.plan.mealPlan);renderChecks();renderShopping();persist();alert("Copia importada.")}catch(err){alert("No se pudo importar el archivo. Comprueba que sea una copia JSON válida.")}finally{e.target.value=""}});
+$("clearAll").addEventListener("click",()=>{if(confirm("¿Borrar perfil, plan y revisiones de esta aplicación en este navegador? Exporta una copia antes. No afecta a otras aplicaciones.")){state=Object.assign({},defaultState);localStorage.removeItem(STORE);$("mealsOut").className="empty";$("mealsOut").textContent="Completa el perfil y pulsa «Generar plan PRO».";$("kcal").textContent=$("protein").textContent=$("carbs").textContent=$("fat").textContent="—";renderChecks();renderShopping();persist()}});
+const today=new Date().toISOString().slice(0,10);$("checkDate").value=today;
+if(state.profile)populate(state.profile);
+if(state.plan&&state.plan.profile&&state.plan.macros&&state.plan.mealPlan){try{renderPlan(state.plan.profile,state.plan.macros,state.plan.mealPlan)}catch(e){console.warn("El plan guardado no se pudo restaurar",e)}}
+renderChecks();renderShopping();if(Array.isArray(state.week)&&state.week.length===7){try{renderWeek(state.week)}catch(e){console.warn("La semana guardada no se pudo restaurar",e)}}persist();
+})();
+</script>
+</body>
+</html>
